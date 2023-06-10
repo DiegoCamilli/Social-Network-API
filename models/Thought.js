@@ -7,21 +7,22 @@ const thoughtSchema = new mongoose.Schema({
     type: String,
     required: true,
     minlength: 1,
-    maxlength: 280,
+    maxlength: 280
   },
   createdAt: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
   username: {
     type: String,
-    required: true,
+    required: true
   },
-  reactions: [reactionSchema],
-})
-
-thoughtSchema.virtual('formattedCreatedAt').get(function () {
-  return dayjs(this.createdAt).format('YYYY-MM-DD HH:mm:ss')
+  reactions: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Reaction'
+    }
+  ]
 })
 
 const Thought = mongoose.model('Thought', thoughtSchema)

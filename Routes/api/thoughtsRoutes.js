@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router()
-const Thought = require('../models/Thought')
+const Thought = require('../../models')
 
 // Get all thoughts
 router.get('/thoughts', async (req, res) => {

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const dayjs = require('dayjs')
 
 const userSchema = new mongoose.Schema({
   username: {
