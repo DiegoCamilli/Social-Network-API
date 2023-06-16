@@ -1,7 +1,7 @@
 const { connect, connection } = require('mongoose')
 
 const connectionString =
-  process.env.MONGODB_URI || 'mongodb+srv://DiegoCamilli:passqord@cool-hw-api.gm4wd40.mongodb.net/'
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/Cool-Hw-API'
 
 connect(connectionString, {
   useNewUrlParser: true,
