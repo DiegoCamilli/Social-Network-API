@@ -76,9 +76,10 @@ const userController = {
 
   // Add friend to user
   addFriend(req, res) {
+    // const savingTheIdBecauseJavascriptIsVerySilly = req.params.userId
     User.findByIdAndUpdate(
-      req.params.userId,
-      { $push: { friends: req.params.friendId } },
+      req.params.id,
+      { $push: { friends: req.params.id } },
       { new: true }
     )
       .then((user) => {
