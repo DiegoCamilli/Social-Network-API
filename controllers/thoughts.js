@@ -10,7 +10,7 @@ const thoughtController = {
 
   // Get thought by id
   getThoughtById(req, res) {
-    Thought.findById(req.params.thoughtId)
+    Thought.findById(req.params.id)
       .then((thought) => {
         if (!thought) {
           return res.status(404).json({ message: 'Thought not found' })
@@ -36,7 +36,7 @@ const thoughtController = {
 
   // Update thought by id
   updateThought(req, res) {
-    Thought.findByIdAndUpdate(req.params.thoughtId, req.body, { new: true })
+    Thought.findByIdAndUpdate(req.params.id, req.body, { new: true })
       .then((thought) => {
         if (!thought) {
           return res.status(404).json({ message: 'Thought not found' })
