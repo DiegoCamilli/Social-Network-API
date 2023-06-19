@@ -20,7 +20,7 @@ const userController = {
 
   // Get user by id
   getUserById(req, res) {
-    User.findById(req.params.userId)
+    User.findById(req.params.id)
       .populate({
         path: 'thoughts',
         select: '-__v',
@@ -60,7 +60,7 @@ const userController = {
 
   // Delete user by id
   deleteUser(req, res) {
-    User.findByIdAndDelete(req.params.userId)
+    User.findByIdAndDelete(req.params.id)
       .then((user) => {
         if (!user) {
           return res.status(404).json({ message: 'User not found' })
