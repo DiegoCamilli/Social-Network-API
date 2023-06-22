@@ -3,7 +3,8 @@
   ## Description
   This is a Demo for using NoSQL databases, in this case MongoDB, to preform CRUD ops for a social app. This is for educational purposes.
 
-  Video Link: 
+  Video Link: https://drive.google.com/file/d/1-0x9dmFKMQ945y87CMDm_cq0kNn0v_wN/view
+  
   
   ![app view](./images/Screenshot%20(219).png)
 ___

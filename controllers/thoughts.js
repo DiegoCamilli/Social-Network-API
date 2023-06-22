@@ -48,7 +48,7 @@ const thoughtController = {
 
   // Delete thought by id
   deleteThought(req, res) {
-    Thought.findByIdAndDelete(req.params.thoughtId)
+    Thought.findByIdAndDelete(req.params.id)
       .then((thought) => {
         if (!thought) {
           return res.status(404).json({ message: 'Thought not found' })
